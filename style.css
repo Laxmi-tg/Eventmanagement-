@@ -1,0 +1,1247 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.html{
+    height: 100%;
+    width: 100%;
+}
+
+
+.body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+  gap: 30px;
+  
+}
+.navbar-nav > li{
+  margin-left:30px;
+  margin-right:30px;
+}
+
+.nav-item a{ 
+  background: linear-gradient(45deg,#4f1919,#ff3333);
+  
+  border-radius: 8px;
+  transition: -5s;
+  color: #f2f2f2;
+   width: 100%; 
+ 
+}
+ .dropdown-item{
+  padding: 3rem; 
+padding-top: 30px;
+background-color: #ff3333;
+margin: 5px;
+overflow: hidden;
+
+} 
+
+
+/* .dropdown .dropdown-menu{
+  display: none;
+  background: #faaeae;
+}
+.dropdown:hover >.dropdown-menu,
+.dropright:hover:hover >.dropdown-menu{
+  display: block;
+  margin-top: 0.1rem;
+  margin-left: 0.1rem;
+}
+.dropright:hover>.dropdown-menu{
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 150em;
+}  */
+/* Style for the parent dropdown menu (Gallery) */
+.nav-item .dropdown-menu {
+  display: none; /* Hide the dropdown initially */
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show the main dropdown on hover over the 'Gallery' */
+.nav-item:hover > .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Submenu inside the dropdown (hidden by default) */
+.submenu .dropdown-menu {
+  display: none; /* Initially hide the submenu */
+  position: absolute;
+  left: 100%; /* Position the submenu to the right */
+  top: 0;
+  margin-top: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show the submenu when hovering over the 'Sub Menu' item */
+.submenu:hover > .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Prevent both menus from showing simultaneously */
+.submenu .dropdown-menu {
+  display: none;
+}
+
+/* Hover effect for the 'Gallery' main link */
+.nav-item .nav-link:hover {
+  background-color: #007bff; /* Blue background on hover */
+  color: white; /* White text color on hover */
+}
+
+/* Hover effect for dropdown items */
+.dropdown-item:hover {
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text color */
+}
+
+/* Basic styling for the dropdown items */
+.dropdown-item {
+  padding: 10px 20px;
+  color: #000;
+  text-decoration: none;
+}
+
+/* Optional: Add box shadow and padding to the dropdown menus */
+.dropdown-menu {
+  padding: 0;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Shadow effect */
+}
+
+/* Optional: styling for submenu items */
+.submenu .dropdown-item {
+  padding-left: 30px; /* Indent submenu items */
+}
+
+
+.img{
+  display: block;
+ top: 50%;
+ left: 50%;
+transform: translate(15%, 10%);
+} 
+
+
+
+
+@media screen and( min-width:769px) {
+  .dropdown :hover>.dropdown-menu{
+    position: absolute;
+    top:0;
+    left: 100%;
+  }
+  .dropdown.dropdown-toggle{
+    margin-left: 0.5;
+  }
+}
+
+/* indexpage text decoration--- */
+/* .hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+} */
+
+
+
+
+
+
+
+/* ------mehindi------ */
+.size {
+  word-spacing: 10px;
+}
+.mehindi{
+  border-radius: 50%;
+}
+.abcd{
+  text-align: center;
+}
+.join{
+  justify-content: center;
+  text-align: center;
+}
+
+
+/* ----banner------- */
+
+.badge{
+ padding: 50px;
+}
+
+
+
+
+
+
+.bt{
+  background-color: #dd7805;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: background-color 0.3s ease;
+}
+.ri-close-line {
+ 
+  top: 10px;
+  float:right;
+  font-size: 34px;
+  cursor: pointer;
+  color: #aaa;
+  transition: color 0.3s ease;
+  width: 0;
+  height: 0;
+}
+
+.ri-close-line:hover {
+  color: #000;
+}
+/* -----login form------- */
+.form-container {
+  width: 300px;
+  padding:2px;
+  display: flex;
+  left: 40%;
+  justify-content: center;
+  margin: 50px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+/* Form heading */
+.form-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+  
+}
+/* ------------ */
+.form-container {
+ display: none;
+ position: absolute;
+ z-index: 100;
+ float: right;
+
+  
+}
+
+/* Show the form container when it has the active class */
+.form-container.active {
+  display: block;
+}
+
+/* Close icon styling */
+#close-form {
+  display: none; /* Hide by default */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* Show the close icon when form container is active */
+.form-container.active #close-form {
+  display: block;
+}
+/* ------------------ */
+/* Input fields */
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+
+}
+
+/* Form buttons */
+.form-container button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+}
+
+.form-container button[type="submit"]:hover {
+  background-color: hsl(46, 96%, 50%);
+}
+
+/* Hide inactive form */
+.form-container form {
+  display: none;
+}
+
+/* Show the active form */
+.form-container form.active {
+  display: block;
+}
+
+/* Additional link styling within forms */
+.form-container a {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+ 
+}
+
+.form-container a:hover {
+  text-decoration: underline;
+}
+
+
+/* -----draggable--sclider---- */
+
+
+
+
+
+
+/* Carousel Container */
+.carousel1 {
+  width: 100%;
+  display: flex;
+  overflow: hidden; /* Hides images that are outside the visible area */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  position: relative; /* For positioning arrows inside the carousel */
+  cursor: grab; /* Hand icon to indicate draggable area */
+  margin: 0 auto;
+}
+
+.carousel1.dragging {
+  cursor: grabbing; /* Changes the cursor when dragging */
+}
+
+/* Carousel Images */
+.carousel1 img {
+  width: 100%;
+  max-width: 300px; 
+  margin-right: 14px;
+  border-radius: 10px; 
+  /* user-select: none; 
+  pointer-events: none;  */
+}
+/* Navigation Arrows (left and right) */
+.wrapper {
+  position: relative; /* Wrapper for arrows */
+}
+
+.wrapper i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100; /* Ensures arrows stay on top of carousel */
+  transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+/* Left Arrow */
+.wrapper i#left {
+  left: 5px; /* Position it on the left */
+}
+
+/* Right Arrow */
+.wrapper i#right {
+  right: 5px; /* Position it on the right */
+}
+
+/* Hover Effect on Arrows */
+.wrapper i:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+}
+
+/* Hide Arrows on Small Screens */
+@media (max-width: 768px) {
+  .carousel1 img {
+      max-width: 90%; /* Reduce image width slightly for tablets */
+      margin-right: 8px;
+  }
+  .wrapper i {
+      display: none; /* Hide arrows on smaller screens */
+  }
+}
+
+/* Responsive Adjustments for Mobile Devices */
+@media (max-width: 480px) {
+  .carousel1 img {
+      max-width: 85%; /* Reduce image width for small phones */
+      margin-right: 6px; /* Adjust gap between images */
+      border-radius: 5px; /* Tighter rounding for smaller screens */
+  }
+
+  .wrapper i {
+      font-size: 20px; /* Smaller arrows */
+      padding: 6px; /* Reduced padding */
+  }
+}
+
+
+
+
+
+
+
+
+/* ------cbzxnbzk----- */
+.footer{
+  
+  padding-left: 10px;
+  left: 0;
+justify-content: center;
+background: linear-gradient(45deg,#f37979,#ff3333);
+
+}
+.footer h4{
+  margin-inline: 30px;
+}
+
+
+.hover img{
+
+    transition: 1s ease;
+    }
+    .hover img:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s ease;
+    }
+
+    .clearfix img {
+      transition: 1s ease;
+      
+      }
+      
+      .clearfix img:hover {
+      border-radius:50%;
+      transition: 1s ease;
+      }
+
+/* ----a----- */
+     
+         
+/* ----------prisha wedding and event--- */
+.heading1 {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+.heading1 span {
+  display: inline-block;
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slidein {
+  from {
+    translate: 150vw 0;
+    scale: 100% 1;
+  }
+
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
+  /* ------abc-welcome to event management------ */
+
+}
+.abc {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+.abc span {
+  display: inline-block;
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slidein {
+  from {
+    translate: 150vw 0;
+    scale: 100% 1;
+  }
+
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
+}
+
+@keyframes growshrink {
+  25%,
+  75% {
+    scale: 100%;
+  }
+
+  50% {
+    scale: 200%;
+    color: magenta;
+  }
+}
+/* ------------allheading---------- */
+.containers{
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+.containers span {
+  display: inline-block;
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slidein {
+  from {
+    translate: 150vw 0;
+    scale: 100% 1;
+  }
+
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
+}
+
+@keyframes growshrink {
+  25%,
+  75% {
+    scale: 100%;
+  }
+
+  50% {
+    scale: 200%;
+    color: magenta;
+  }
+}
+
+/* -----catering effect------- */
+.effect{
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+.effect span {
+  display: inline-block;
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: 2;
+}
+
+@keyframes slidein {
+  from {
+    translate: 150vw 0;
+    scale: 100% 1;
+  }
+
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
+}
+
+@keyframes growshrink {
+  25%,
+  75% {
+    scale: 100%;
+  }
+
+  50% {
+    scale: 200%;
+    color: magenta;
+  }
+}
+/* -----------contact------ */
+.map{
+        width: 40%;
+        height: 30%;
+}
+
+.address{
+  justify-content: center;
+  float: left;
+ 
+  padding: 10px;
+  height: 300px;
+}
+.new{
+  justify-content: center;
+}
+.new h5{
+  right: 20px;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+
+
+
+.heading{
+	text-align: center;
+}
+.heading1{
+	text-align: center;
+	
+  }
+.color{
+  text-align: center;
+}
+
+.cantainer1 {
+  justify-content: center;
+  margin: 60px;
+
+}
+.ri-whatsapp-line {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 3px 4px 3px #999;
+  right: 15px;
+  z-index: 100;
+ 
+}
+/* ----aboutpage------ */
+
+.heading2{
+  text-align: center;
+
+}
+.text-black{
+  text-decoration: none;
+
+}
+
+.my-float {
+  margin-top: 10px;
+}
+.images{
+  margin-inline: 20px;
+  
+}
+.images h5{
+  margin: inline 3px,  10 px;
+  text-align: center;
+}
+
+.list-unstyled{
+  margin-inline: 30px;
+}
+
+
+
+
+
+/* --------services------- */
+
+
+
+
+
+.zoom{
+  box-shadow: #aaa;
+  transition: 1s;
+}
+.zoom :hover{
+  transform: scale(1.3);
+  z-index:2 ;
+}
+
+
+
+
+
+
+.card-img-top{
+  box-shadow: #999;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.background{
+  background-image: url("./assets/background.jpg");
+
+}
+.background h5{
+  text-align: center;
+}
+.heading2 {
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+.effect h5{
+  text-align: center;
+  
+}
+
+@keyframes slidein {
+  from {
+    translate: 150vw 0;
+    scale: 200% 1;
+  }
+
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
+}
+
+
+/* --------g------ */
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 800px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  bottom: 10px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+/* .caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+} */
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+ 
+
+/* -------contact--------- */
+.n-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 25px;
+  background: #d6eef1;
+}
+
+.n-container form {
+  width: 700px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.n-container form .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.n-container form .row .col {
+  flex: 1 1 250px;
+}
+
+.col .title {
+  font-size: 20px;
+  color: rgb(237, 55, 23);
+  padding-bottom: 5px;
+}
+
+.col .inputBox {
+  margin: 15px 0;
+}
+
+.col .inputBox label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.col .inputBox input,
+.col .inputBox select {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  font-size: 15px;
+}
+
+.col .inputBox input:focus,
+.col .inputBox select:focus {
+  border: 1px solid #000;
+}
+
+.col .flex {
+  display: flex;
+  gap: 15px;
+}
+
+.col .flex .inputBox {
+  flex: 1 1;
+  margin-top: 5px;
+}
+
+.col .inputBox img {
+  height: 34px;
+  margin-top: 5px;
+  filter: drop-shadow(0 0 1px #000);
+}
+
+.n-container form .submit_btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 17px;
+  background: rgb(1, 143, 34);
+  color: #fff;
+  margin-top: 5px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.n-container form .submit_btn:hover {
+  background: #3d17fb;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  display: none;
+}
+
+/* -------FAQs------ */
+/* Styling the accordion container */
+.accordion-flush {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* Accordion header button styles */
+.accordion-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 18px;
+  padding: 15px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Accordion button on hover */
+.accordion-button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Accordion button collapsed state */
+.accordion-button.collapsed {
+  background-color: #b9b6b4;
+  color: #fff;
+}
+
+/* Accordion button active state */
+.accordion-button:not(.collapsed) {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Accordion body content styles */
+.accordion-body {
+  padding: 15px;
+  background-color: #d1e0f0;
+  border-top: 1px solid #ddd;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Accordion item styling */
+.accordion-item {
+  border: none;
+  margin-bottom: 10px;
+}
+
+/* Accordion header border radius for the top corners */
+.accordion-item:first-of-type .accordion-button {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* Accordion body border radius for the bottom corners */
+.accordion-item:last-of-type .accordion-body {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+
+
+
+
+
+
+/* -------captcha------ */
+
+/* Overall wrapper styling */
+.wrapper1 {
+  max-width: 485px;
+  width: 100%;
+  background: #f7f7f7;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Header styling */
+.wrapper1 header {
+  color: #4db2ec;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Captcha area styling */
+.captcha-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Captcha image container styling */
+.captcha-img {
+  background: #f38787;
+  height: 65px;
+  width: 345px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  position: relative;
+}
+
+.captcha {
+  font-size: 30px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: #fff;
+  user-select: none; /* Disable text selection */
+}
+
+.reload-btn {
+  width: 60px;
+  height: 65px;
+  background: #4db2ec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reload-btn i {
+  color: #fff;
+  font-size: 22px;
+  transition: transform 0.3s ease;
+  align-items: center;
+  position: relative;
+}
+
+/* .reload-btn:hover i {
+  transform: rotate(15deg);
+} */
+
+/* Input area styling */
+.input-area {
+  position: relative;
+  height: 60px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 0 15px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #4db2ec;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+/* Check button styling */
+.check-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #4db2ec;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.check-btn:hover {
+  background-color: #034063;
+}
+
+/* Status text styling */
+.status-text {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 500px) {
+  .captcha-img {
+    width: 70%;
+    font-size: 20px;
+  }
+
+  .captcha {
+    font-size: 24px;
+  }
+
+  .reload-btn {
+    width: 50px;
+    height: 60px;
+  }
+
+  .check-btn {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .status-text {
+    font-size: 16px;
+  }
+}
+/* --------jbkj */
+
+@media (min-width: 765px) {
+  .navbar {
+      width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Media Query for Tablets */
+@media (min-width: 600px) {
+  .container {
+      width: 100%;
+  }
+}
+
+/* Media Query for Laptops */
+@media (min-width: 992px) {
+  .container {
+      width: 100%;
+  }
+}
+
+/* Media Query for Desktops */
+@media (min-width: 1200px) {
+  .container {
+      width: 60%;
+  }
+}
+
+/* ---navbar media query---- */
+@media only screen and (max-width: 576px) {
+  .nav-item {
+    width: 50%;
+}
+}
+

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catch the Fruit Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>Catch the Fruit</h1>
+    <p>Click the fruits before they fall!</p>
+    <div id="game-area" class="game-area"></div>
+    <p id="score">Score: 0</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+<style>
+   * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e0f7fa;
+  font-family: Arial, sans-serif;
+}
+
+.game-container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+  color: #333;
+}
+
+.game-area {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  border: 2px solid #333;
+  background-color: #fff;
+  overflow: hidden;
+  margin: 20px auto;
+}
+
+.fruit {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+#score {
+  font-size: 1.5em;
+  margin-top: 10px;
+  color: #333;
+}
+
+   
+   </style>
+   <script>
+    
+    const gameArea = document.getElementById('game-area');
+const scoreDisplay = document.getElementById('score');
+let score = 0;
+let gameInterval;
+
+const fruits = [
+  '🍎', '🍌', '🍓', '🍇', '🍉', '🍍'
+];
+
+function createFruit() {
+  const fruit = document.createElement('div');
+  fruit.classList.add('fruit');
+  fruit.textContent = fruits[Math.floor(Math.random() * fruits.length)];
+  
+  const fruitSize = 50;
+  const maxLeft = gameArea.clientWidth - fruitSize;
+  fruit.style.left = Math.random() * maxLeft + 'px';
+  fruit.style.top = '-50px';
+  
+  fruit.addEventListener('click', () => {
+    score++;
+    scoreDisplay.textContent = `Score: ${score}`;
+    fruit.remove();
+  });
+  
+  gameArea.appendChild(fruit);
+  animateFruit(fruit);
+}
+
+function animateFruit(fruit) {
+  const fallSpeed = 2 + Math.random() * 3;
+  function moveFruit() {
+    const currentTop = parseFloat(fruit.style.top);
+    if (currentTop < gameArea.clientHeight) {
+      fruit.style.top = currentTop + fallSpeed + 'px';
+      requestAnimationFrame(moveFruit);
+    } else {
+      fruit.remove();
+    }
+  }
+  moveFruit();
+}
+
+function startGame() {
+  score = 0;
+  scoreDisplay.textContent = `Score: ${score}`;
+  gameInterval = setInterval(createFruit, 1000);
+}
+
+startGame();
+
+    </script>
